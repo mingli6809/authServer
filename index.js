@@ -184,8 +184,8 @@ app.get('/logout', asyncWrapper(async (req, res) => {
 
     await userModel.updateOne({ username: 'test' }, { token_invalid: true })
   
-  // res.send("Logged out")
-  res.redirect('/');
+   res.send("Logged out")
+ // res.redirect('/');
 }))
 
 module.exports = app
