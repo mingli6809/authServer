@@ -72,7 +72,8 @@ app.use(cors({
   exposedHeaders: ['auth-token-access', 'auth-token-refresh']
 }))
 
-const bcrypt = require("bcrypt")
+// const bcrypt = require("bcryptjs ")
+var bcrypt = require('bcryptjs');
 app.post('/register', asyncWrapper(async (req, res) => {
   const {
     username,
