@@ -139,7 +139,7 @@ app.post('/login', asyncWrapper(async (req, res) => {
   const accessToken = jwt.sign({
     user: user
   }, process.env.ACCESS_TOKEN_SECRET, {
-    expiresIn: '10s'
+    expiresIn: '40s'
   })
   const refreshToken = jwt.sign({
     user: user
